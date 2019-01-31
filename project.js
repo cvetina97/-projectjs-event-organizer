@@ -34,6 +34,20 @@ function getNextId(){
         }
         return id;
 }
+//check for invalid name of the event
+function checkNameofEvent(event){
+    if(typeof event.name === "string" && (event.name === "18+" || event.name === "free")){
+        console.log("You have to add name to the event!!! ");
+        return false;
+    }
+    else if(typeof event.name !== "string"){
+        console.log("The name must be a string!!! ");
+        return false;
+    }
+    else {
+        return true;
+    }
+}
 //class Clients - 4 required properties , count for visits per client and status 
 function Clients(name,gender,age,envelope){
     this.name=name;
@@ -46,7 +60,7 @@ function Clients(name,gender,age,envelope){
 //method for adding items - 1.check if the system is closed and if so can't add events
 //2.check if the price of event is 0 and ets. and put a symbol to the name 
 function pushEvents(event){
-    if(isClosed===true){
+    if(isClosed===true || checkNameofEvent(event)=== false){
         console.log("You cannot add events , because the system is closed!");
         return;
     }
@@ -393,3 +407,5 @@ function rate(eventFromTheArchive,clientToRate,rate){
         }
         eventFromTheArchive.rating=(eventFromTheArchive.rating+currentRate)/2;
 }
+
+

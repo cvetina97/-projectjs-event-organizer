@@ -4,7 +4,7 @@ of one event.In the constuctor there is a counter who calculates id*/
 var eventBirthday = new Events("Birthday party Planet club ","18+",20);
 var eventGrandOpening=new Events("Grand opening of Club 33","18+",50);
 var eventConcert=new Events("Black Eyed Piece in Sofia","18+",150);
-var eventBabyBorn=new Events("New baby ","free",30);
+var eventBabyBorn=new Events("New baby born","free",30);
 var eventCapanaFest= new Events("Capana Fest 2019","free",40);
 var eventQueenOfRoses=new Events("Queen of Roses Karlovo 2019","free");
 
@@ -172,8 +172,3 @@ then calculates the current rate ,converting from tenth to sixth system
 and adds the client to array of voted clients*/
 rate(eventBabyBorn,clientDeivid,3);
 console.log(archivedEvents);
-
-
-
-
-
