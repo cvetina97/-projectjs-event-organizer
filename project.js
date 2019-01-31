@@ -146,7 +146,7 @@ function addClientToEvent(clientData,eventData){
                 eventData.Clients.push(clientData);
             }
             else {
-               console.log("This client can't be added , because he/she is under-age!");
+               console.log("Client "+ clientData.name + "  can't be added , because he/she is under-age!");
             }
         }else if(eventData.access === 'free' && (checkClientForMoney == true || checkClientForMoney=== "VIP Client")){
             clientData.countVisitsPerClient++;
@@ -284,7 +284,7 @@ function checkForMoney(clientData,eventData){
     else {
         clientData.envelope=0;
         canBeAdded=false;
-        console.log("This client has no money in the envelope and can't be registered!");
+        console.log("Client " + clientData.name + " has no money in the envelope and can't be registered!");
         
     }
     return canBeAdded;
@@ -393,5 +393,3 @@ function rate(eventFromTheArchive,clientToRate,rate){
         }
         eventFromTheArchive.rating=(eventFromTheArchive.rating+currentRate)/2;
 }
-
-

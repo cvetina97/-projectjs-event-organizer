@@ -83,9 +83,7 @@ console.log("-----");
 
 /*function for deleting client from event , accepts client and event as parameters
 as with map finds the client and then deletes him from the array */
-popClientFromEvent(clientCveti,eventBirthday);
 //check it item is deleted
-console.log(eventBirthday.Clients);
 console.log("----");
 popClientFromEvent(clientSimona,eventBirthday);
 console.log(eventBirthday.Clients);
@@ -174,6 +172,8 @@ then calculates the current rate ,converting from tenth to sixth system
 and adds the client to array of voted clients*/
 rate(eventBabyBorn,clientDeivid,3);
 console.log(archivedEvents);
+
+
 
 
 
